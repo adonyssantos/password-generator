@@ -1,12 +1,15 @@
-const generatePassword = () => {
-  let twoWords = "",
-  number = 0,
-  symbol = "",
-  website = "",
-  firtLetter = false,
-  lastUpdate = new Date();
+const generatePassword = (data) => {
+  let twoWords = data[0],
+    number = data[1],
+    symbol = data[2],
+    website = data[3],
+    firtLetter = data[4],
+    currenDate = new Date();
+  let password = "";
 
-  return null;
-}
+  //Generate password code...
+
+  return password;
+};
 
 export default generatePassword;
