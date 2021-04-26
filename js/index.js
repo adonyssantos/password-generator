@@ -28,7 +28,7 @@ const generatePassword = (data) => {
 
   //Generate password code...
 
-  console.log(twoWords, number, symbol, website, firtLetter, currenDate);
+  return password;
 };
 
 const postData = () => {
