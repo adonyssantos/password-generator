@@ -9,20 +9,28 @@ const getData = () => {
     (lastUpdate = new Date()),
   ];
 
+  let input = document.getElementsByTagName("input");
+  console.log("push", input);
+  for (i = 0; i < input.length; i++) {
+    return {
+      index: i,
+      data: data[i],
+    };
+  }
+};
+
+const generatePassword = (data) => {
+	console.log(data)
   return data;
 };
 
-const get = () => {
-	let input = document.getElementsByTagName("input");
-	for (i = 0; i < input.length; i++) {
-		input[i].addEventListener("change", () => {
-			resultados = getData();
-			console.log(resultados);
-		});
-	}
+const postData = () => {
+  document.getElementById("generated-password").innerHTML = generatePassword(
+    getData()
+  );
 };
 
 const submit = document.getElementById("submit");
 submit.addEventListener("click", () => {
-  document.write('fsdfsf')
+  postData();
 });
