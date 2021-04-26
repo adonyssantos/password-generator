@@ -6,21 +6,19 @@ const getData = () => {
     (symbol = document.getElementById("symbol").value),
     (website = document.getElementById("website").value),
     (firtLetter = document.getElementById("first-letter__website").value),
-    (lastUpdate = new Date()),
   ];
 
   let input = document.getElementsByTagName("input");
-  console.log("push", input);
+  let result = [];
   for (i = 0; i < input.length; i++) {
-    return {
-      index: i,
-      data: data[i],
-    };
+    result.push(data[i]);
   }
+
+  return result;
 };
 
 const generatePassword = (data) => {
-	console.log(data)
+  console.log(data);
   return data;
 };
 
