@@ -1,6 +1,6 @@
-import generatePassword from "./generatePassword";
-import getData from "./getData";
-import postData from "./postData";
+// import { generatePassword } from "./generatePassword";
+// import { getData } from "./getData";
+// import { postData } from "./helpers/postData";
 
 const submit = document.getElementById("submit");
 submit.addEventListener("click", () => postData(generatePassword(getData())));
