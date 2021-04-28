@@ -7,7 +7,33 @@ const generatePassword = (data) => {
     currenDate = new Date();
   let password = "";
 
-  //Generate password code...
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  twoWords = twoWords.split(" ", 2);
+
+  password =
+    website +
+    symbol +
+    twoWords[0] +
+    number[0] +
+    twoWords[1] +
+    number[1] +
+    "_" +
+    months[currenDate.getMonth()] +
+    currenDate.getFullYear();
 
   return password;
 };
