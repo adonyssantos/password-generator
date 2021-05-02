@@ -1,6 +1,6 @@
 const generatePassword = (data) => {
   let password = "";
-  const twoWords = data[0],
+  let twoWords = data[0],
     number = data[1],
     symbol = data[2],
     website = data[3],
@@ -8,7 +8,8 @@ const generatePassword = (data) => {
     currenDate = new Date();
   const months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ];
 
-  // first letter condition here
+  // first letter condition
+  if (firtLetter == "true") website = website[0];
 
   twoWords = twoWords.split(" ", 2);
 
