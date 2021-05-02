@@ -15,5 +15,3 @@ const getData = () => {
   
 	return result;
   };
-
-// export default getData;

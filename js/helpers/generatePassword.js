@@ -38,4 +38,3 @@ const generatePassword = (data) => {
   return password;
 };
 
-// export default generatePassword;
