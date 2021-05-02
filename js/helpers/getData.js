@@ -9,7 +9,7 @@ const getData = () => {
   
 	let input = document.getElementsByTagName("input");
 	let result = [];
-	for (i = 0; i < input.length; i++) {
+	for (i = 0; i <= input.length; i++) {
 	  result.push(data[i]);
 	}
   
