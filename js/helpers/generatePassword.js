@@ -1,6 +1,6 @@
 const generatePassword = (data) => {
   let password = "";
-  const twoWords = data[0],
+  let twoWords = data[0],
     number = data[1],
     symbol = data[2],
     website = data[3],
