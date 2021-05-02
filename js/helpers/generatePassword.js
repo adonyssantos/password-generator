@@ -1,26 +1,14 @@
 const generatePassword = (data) => {
-  let twoWords = data[0],
+  let password = "";
+  const twoWords = data[0],
     number = data[1],
     symbol = data[2],
     website = data[3],
     firtLetter = data[4],
     currenDate = new Date();
-  let password = "";
+  const months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ];
 
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+  // first letter condition here
 
   twoWords = twoWords.split(" ", 2);
 
@@ -37,4 +25,3 @@ const generatePassword = (data) => {
 
   return password;
 };
-
