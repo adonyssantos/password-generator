@@ -6,12 +6,31 @@ const generatePassword = (data) => {
     website = data[3],
     firtLetter = data[4],
     currenDate = new Date();
-  const months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
   // first letter condition
   if (firtLetter == "true") website = website[0];
 
   twoWords = twoWords.split(" ", 2);
+
+  // verify that the user enters data
+  if (!twoWords[1] || !number[1] || !symbol || !website) {
+    alert("You must complete all the fields.");
+    return null;
+  }
 
   password =
     website +
