@@ -1,11 +1,12 @@
 const generatePassword = (data) => {
   let password = "";
-  let twoWords = data[0],
-    number = data[1],
-    symbol = data[2],
-    website = data[3],
-    firtLetter = data[4],
-    currenDate = new Date();
+  // let twoWords = data[0],
+  //   number = data[1],
+  //   symbol = data[2],
+  //   website = data[3],
+  //   firtLetter = data[4],
+  //   currenDate = new Date();
+  const currenDate = new Date();
   const months = [
     "Jan",
     "Feb",
@@ -22,23 +23,23 @@ const generatePassword = (data) => {
   ];
 
   // first letter condition
-  if (firtLetter == "true") website = website[0];
+  if (data.firtLetter == "true") data.website = data.website[0];
 
-  twoWords = twoWords.split(" ", 2);
+  twoWords = data.twoWords.split(" ", 2);
 
   // verify that the user enters data
-  if (!twoWords[1] || !number[1] || !symbol || !website) {
+  if (!data.twoWords[1] || !data.number[1] || !data.symbol || !data.website) {
     alert("You must complete all the fields.");
     return null;
   }
 
   password =
-    website +
-    symbol +
-    twoWords[0] +
-    number[0] +
-    twoWords[1] +
-    number[1] +
+    data.website +
+    data.symbol +
+    data.twoWords[0] +
+    data.number[0] +
+    data.twoWords[1] +
+    data.number[1] +
     "_" +
     months[currenDate.getMonth()] +
     currenDate.getFullYear();
