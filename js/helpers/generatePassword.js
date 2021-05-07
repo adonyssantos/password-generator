@@ -22,23 +22,24 @@ const generatePassword = (data) => {
     "Dec",
   ];
 
-  // first letter condition
-  if (data.firtLetter == "true") data.website = data.website[0];
-
-  twoWords = data.twoWords.split(" ", 2);
-
   // verify that the user enters data
   if (!data.twoWords[1] || !data.number[1] || !data.symbol || !data.website) {
     alert("You must complete all the fields.");
     return null;
   }
 
+  // first letter condition
+  if (data.firtLetter == "true") data.website = data.website[0];
+
+  // split the two words
+  let twoWords = data.twoWords.split(" ", 2);
+
   password =
     data.website +
     data.symbol +
-    data.twoWords[0] +
+    twoWords[0] +
     data.number[0] +
-    data.twoWords[1] +
+    twoWords[1] +
     data.number[1] +
     "_" +
     months[currenDate.getMonth()] +
