@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,44 @@
 	<title>Password Generator by Adonys</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-	<main>
-		<section>
-				<h1>Password Generator</h1>
-				<p>Generate strong passwords and easy to remember.</p>
-				<p>We recommend that you not use personal data, like your name, birthday, etc.</p>
-				<hr>
-				<div id="form">
-					<label for="two-words">
-						<span>Two Words</span>
-						<input type="text" id="two-words" placeholder="Hello world" required>
-					</label>
-					<label for="number">
-						<span>Number</span>
-						<input type="number" id="number" placeholder="69" required>
-					</label>
-					<label for="symbol">
-						<span>Symbol</span>
-						<input type="text" id="symbol" placeholder="#" required>
-					</label>
-					<label for="website">
-						<span>Website</span>
-						<input type="text" id="website" placeholder="Twitter" required>
-					</label>
-					<label for="first-letter__website">
-						<span>Only use the first website's letter</span>
-						<select name="first-letter__website" id="first-letter__website">
-							<option value="false" selected>No (recommend)</option>
-							<option value="true">Yes</option>
-						</select>
-					</label>
-					<button id="submit">Generate</button>
-				</div id="result-container">
-					<p><span>Your Password:</span></p>
-					<p id="generated-password"></p>
-				</div>
-			</section>
+	<main class="container">
+		<section class="card">
+			<h1>Password Generator</h1>
+			<p>Generate strong passwords and easy to remember.</p>
+			<p>We recommend that you not use personal data, like your name, birthday, etc.</p>
+			<hr>
+			<form id="form">
+				<label for="two-words">
+					<span>Two Words</span>
+					<input class="input" type="text" id="two-words" placeholder="Hello world" required>
+				</label>
+				<label for="number">
+					<span>Number</span>
+					<input class="input" type="number" id="number" placeholder="69" required>
+				</label>
+				<label for="symbol">
+					<span>Symbol</span>
+					<input class="input" type="text" id="symbol" placeholder="#" required>
+				</label>
+				<label for="website">
+					<span>Website</span>
+					<input class="input" type="text" id="website" placeholder="Twitter" required>
+				</label>
+				<label for="first-letter__website">
+					<span>Only use the first website's letter</span>
+					<select class="input" name="first-letter__website" id="first-letter__website">
+						<option value="false" selected>No (recommend)</option>
+						<option value="true">Yes</option>
+					</select>
+				</label>
+			</form>
+			<button class="btn" id="submit">Generate</button>
+			<div id="result-container">
+				<p><span>Your Password:</span></p>
+				<p id="generated-password"></p>
+			</div>
 		</section>
 	</main>
 	<!-- Helpers -->
@@ -51,9 +53,9 @@
 	<script src="./js/helpers/generatePassword.js"></script>
 	<script src="./js/helpers/postData.js"></script>
 	<script src="./js/helpers/initialPassword.js"></script>
-	
 
 	<!-- Index -->
 	<script src="./js/index.js" type="module"></script>
 </body>
+
 </html>
